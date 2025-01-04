@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cabinet de Soins Médicaux la Croix Glorieuse</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/inventory.png</normaloff>img/inventory.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font-family: Century Gothic;
+}
+
+QGroupBox{
+	background-color:#333;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid gray;
+	font: 14pt &quot;Montserrat&quot;;
+}
+
+QPushButton{
+	border-radius: 10px;
+	background-color: white;
+	border: 1px inset gray;
+}
+
+QPushButton:hover{
+	border-radius: 5px;
+	background-color: orange;
+	border: 1px inset gray;
+	color: white;
+}
+
+QLabel{
+	color: white;
+	/*border-bottom: 1px solid white;
+	border-bottom-color:1px solid rgb(255, 255, 255);*/
+}
+
+QToolButton{
+	border-radius: 40px;
+	background-color:orange;
+	border: 5px solid #333;
+}
+QComboBox{
+	color: gray;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>781</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat</family>
+      <pointsize>16</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 16pt &quot;Montserrat&quot;;</string>
+    </property>
+    <property name="title">
+     <string>Consultation</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>90</y>
+       <width>471</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="login_lbl">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="mdp_lineEdit">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Mot de passe</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="user_level_lbl">
+        <property name="text">
+         <string>Niveau</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="login_lineEdit">
+        <property name="placeholderText">
+         <string>Nom d'utilisateur</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="mdp_lbl">
+        <property name="text">
+         <string>Mot de passe</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_niveau">
+        <item>
+         <property name="text">
+          <string>Administrateur - 0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Supervieur - 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Utilisateur - 2</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="cx_btn">
+        <property name="text">
+         <string>Se Connecter</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QToolButton" name="toolButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>140</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/defaultProfileSqare.png</normaloff>img/defaultProfileSqare.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>58</width>
+      <height>58</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>801</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 51);
+font: 81 22pt &quot;Montserrat ExtraBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;div align=&quot;center&quot;&gt;Cabinet de Soins Médicaux&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;LA CROIX GLORIEUSE&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>801</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <zorder>line_2</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>toolButton</zorder>
+   <zorder>line</zorder>
+   <zorder>label</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,23 @@
+SUITE :
+Pour afficher le nom de l'utilisateur connecté sur le label name_user_auth_lbl de la deuxième fenêtre (consultation.py) après la connexion, vous pouvez passer l'information de l'utilisateur connecté à la deuxième fenêtre lors de son instanciation.
+
+Dans Medical_consultation.py, modifiez la partie où vous instanciez la deuxième fenêtre pour passer l'information de l'utilisateur connecté :
+
+
+
+
+2.
+Après avoir reçu le résultat de la recherche, est-il possible de cliquer sur un ligne et afficher un popup avec toutes les informations de la ligne concernée?
+
+3.
+Si mon QTabWidget s'appelle tw_identity, je peut écrire :
+self.tw_identity.currentChanged.connect(self.handle_tab_change)
+
+
+4.
+Comment faire en sorte que à l'ouverture du popup elle puisse s'ouvrir en respectant la taille fixée à 250 et 500 ?
+
+
+5.
+Comment pouvoir récupérer la valeur du bouton radio enregistré dans la base de données sachant qu'il s'agit du bouton radio "sexe" avec les occurrences "Féminin" et "Masculin" ?
+

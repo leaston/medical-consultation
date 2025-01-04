@@ -1,0 +1,28 @@
+Symfony ux : https://ux.symfony.com/demos/live-component/dependent-form-fields
+
+Les uses :
+use App\Form\MealPlannerForm;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\FormInterface;
+use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
+use Symfony\UX\LiveComponent\ComponentWithFormTrait;
+use Symfony\UX\LiveComponent\DefaultActionTrait;
+
+1- $ composer require symfony/stimulus-bundle
+2- $ composer require symfonycasts/dynamic-forms
+3-  $ composer require Symfony/ux-live-component => qui va installer le "twig-component"
+4- Créer un live component :
+	Symfony console m:twig-comp Registration
+
+  Make this a live component ? Yes
+5- Dans la classe php, ajouter ceci :
+	use ComponentWithFormTrait; =>  importer le use : Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
+	
+6- Dans la classe php, après les use, ajouter la fonction suivante :
+	protected function instantiateForm(): FormInterface
+    	{
+        	return $this->createForm(MealPlannerForm::class);
+    	}
+	
+7- étendre AbstractController comme suit :
+	class MealPlanner  extends AbstractController

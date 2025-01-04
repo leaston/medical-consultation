@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dashboard_window</class>
+ <widget class="QMainWindow" name="dashboard_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1267</width>
+    <height>728</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cabinet de Soins Médicaux la Croix Glorieuse</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font-family: Century Gothic;
+}
+
+QGroupBox{
+	background-color:#333;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid gray;
+	font: 14pt &quot;Montserrat&quot;;
+}
+
+QLabel{
+	color: white;
+}
+
+QToolButton{
+	border-radius: 40px;
+	background-color:orange;
+	border: 5px solid #333;
+}
+QComboBox{
+	background-color: rgb(51, 51, 51);
+	font-size: 16px;
+	color: white
+}
+
+QLineEdit{
+	background-color: rgb(51, 51, 51);
+	padding-left: 10px;
+	font-size: 16px;
+	color: white;
+}
+
+QSpinBox{
+	background-color: rgb(51, 51, 51);
+	font-size: 16px;
+	color: white;
+}
+
+QRadioButton{
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="header_lbl_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1271</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 51);
+font: 81 22pt &quot;Montserrat ExtraBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;div align=&quot;center&quot;&gt;Cabinet de Soins Médicaux&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;LA CROIX GLORIEUSE&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>1251</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <property name="usesScrollButtons">
+        <bool>true</bool>
+       </property>
+       <property name="documentMode">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="patient_tab">
+        <attribute name="title">
+         <string>Identité du Patient</string>
+        </attribute>
+        <widget class="QTableWidget" name="restitute_tbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>1221</width>
+           <height>281</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="autoScrollMargin">
+          <number>12</number>
+         </property>
+         <property name="columnCount">
+          <number>16</number>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>30</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>N°</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Nom &amp; Prénoms</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Profession</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Sexe</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Age</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Commune</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Secteur</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Téléphone</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Zone de résidence (en Km)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>T°</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>TA BD</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>TA BG</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Poids</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Diagnostic</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Traitements</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Observations</string>
+          </property>
+         </column>
+        </widget>
+        <widget class="QPushButton" name="refresh_btn">
+         <property name="geometry">
+          <rect>
+           <x>1039</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:  rgb(51, 51, 51);
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: orange;
+border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>Rafraichir</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>10</y>
+           <width>1221</width>
+           <height>36</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="search_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 14pt &quot;Century Gothic&quot;;
+color: rgba(51, 51, 51);</string>
+            </property>
+            <property name="text">
+             <string>Recherche de Noms dans la base de données</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="search_lineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="search_btn">
+            <property name="text">
+             <string>Search</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tasaisie_identite_tab">
+        <attribute name="title">
+         <string>Saisie Identité du Patient</string>
+        </attribute>
+        <widget class="QLabel" name="id_lbl">
+         <property name="geometry">
+          <rect>
+           <x>22</x>
+           <y>10</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+         </property>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="id">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>8</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(147, 147, 147);
+font: 75 16pt &quot;Century Gothic&quot;;
+padding-left:5px;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>1221</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <item row="1" column="5">
+           <widget class="QLabel" name="sector_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;
+margin-left: 20px;</string>
+            </property>
+            <property name="text">
+             <string>Secteur</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QLabel" name="phone_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;
+margin-left: 20px;</string>
+            </property>
+            <property name="text">
+             <string>Téléphone</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLabel" name="commune_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;
+margin-left: 20px;</string>
+            </property>
+            <property name="text">
+             <string>Commune</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="profession_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Profession</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="name_ledit"/>
+          </item>
+          <item row="1" column="6">
+           <widget class="QSpinBox" name="sector_spinBox"/>
+          </item>
+          <item row="0" column="6">
+           <widget class="QLineEdit" name="commune_ledit"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="profession_ledit"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="age_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Age</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="age_ledit"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QRadioButton" name="women_rbtn">
+            <property name="text">
+             <string>Féminin</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="6">
+           <widget class="QComboBox" name="zone_comboBox">
+            <property name="modelColumn">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>0-4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5-9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10 et plus</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="gender_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Sexe</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QRadioButton" name="man_rbtn">
+            <property name="text">
+             <string>Masculin</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="6">
+           <widget class="QLineEdit" name="phone_ledit"/>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLabel" name="zone_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;
+margin-left: 20px;</string>
+            </property>
+            <property name="text">
+             <string>&lt;div&gt;Zone de résidence&lt;/div&gt;&lt;div&gt; (en Km)&lt;/div&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="name_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Nom &amp; Prénoms</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="first_btn">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>359</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="previous_btn">
+         <property name="geometry">
+          <rect>
+           <x>62</x>
+           <y>359</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="last_btn">
+         <property name="geometry">
+          <rect>
+           <x>182</x>
+           <y>360</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="next_btn">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>360</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="add_btn">
+         <property name="geometry">
+          <rect>
+           <x>639</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:  rgb(25,135,84);
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: rgb(13,202,240);
+	border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="edit_btn">
+         <property name="geometry">
+          <rect>
+           <x>839</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(13,110,253);
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: rgb(13,202,240);
+	border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="del_btn">
+         <property name="geometry">
+          <rect>
+           <x>1039</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:  red;
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: orange;
+	border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>supprimer</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>-3</x>
+           <y>345</y>
+           <width>1251</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="saisie_diagnostic_tab">
+        <attribute name="title">
+         <string>Diagnostic</string>
+        </attribute>
+        <widget class="QLabel" name="symptom_lbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>45</y>
+           <width>161</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);</string>
+         </property>
+         <property name="text">
+          <string>Symptômes</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>65</y>
+           <width>1221</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="temp_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>T°</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="temp_ledit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="tabd_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>TA BD</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="tabd_ledit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="tabg_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>TA BG</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="tabg_ledit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="bg_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>BG</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="bg_ledit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="weight_lbl">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Poids</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="weight_ledit">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="diagnostic_lbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>105</y>
+           <width>161</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);</string>
+         </property>
+         <property name="text">
+          <string>Diagnostic</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="diagnostic_textEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>125</y>
+           <width>591</width>
+           <height>81</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="treatments_lbl">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>105</y>
+           <width>161</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);</string>
+         </property>
+         <property name="text">
+          <string>Traitements</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="observations_textEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>242</y>
+           <width>591</width>
+           <height>91</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="observeations_lbl">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>222</y>
+           <width>161</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);</string>
+         </property>
+         <property name="text">
+          <string>Observations</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="id_2">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>8</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(147, 147, 147);
+font: 75 16pt &quot;Century Gothic&quot;;
+padding-left:5px;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="id_lbl_2">
+         <property name="geometry">
+          <rect>
+           <x>22</x>
+           <y>10</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Century Gothic&quot;;
+color: rgb(51, 51, 51);
+padding-left: 10px;</string>
+         </property>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="previous_bt_2">
+         <property name="geometry">
+          <rect>
+           <x>62</x>
+           <y>359</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="first_btn_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>359</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="last_btn_2">
+         <property name="geometry">
+          <rect>
+           <x>182</x>
+           <y>360</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="next_btn_2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>360</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(108,117,125);
+	border-radius: 3px;
+	color: white;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	color: orange;
+	border-radius: 3px;
+	border: 1px outset gray;
+	font: 12pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_2">
+         <property name="geometry">
+          <rect>
+           <x>-3</x>
+           <y>345</y>
+           <width>1251</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="add_btn_2">
+         <property name="geometry">
+          <rect>
+           <x>639</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:  rgb(25,135,84);
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: rgb(13,202,240);
+	border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="edit_btn_2">
+         <property name="geometry">
+          <rect>
+           <x>839</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(13,110,253);
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: rgb(13,202,240);
+	border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="del_btn_2">
+         <property name="geometry">
+          <rect>
+           <x>1039</x>
+           <y>360</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:  red;
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: orange;
+	border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>supprimer</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="treatments_textEdit">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>125</y>
+           <width>591</width>
+           <height>81</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>100</y>
+      <width>1251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="user_auth_lbl">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(51, 51, 51);
+padding-left: 10px;
+font-size: 16px;</string>
+       </property>
+       <property name="text">
+        <string>Utilisateur authentifié :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="name_user_auth_lbl">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 16px;
+color: rgb(51, 51, 51);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateTimeEdit" name="dateTimeEdit">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Century Gothic</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="locale">
+        <locale language="French" country="BurkinaFaso"/>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhPreferNumbers</set>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="date">
+        <date>
+         <year>2023</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="quit_btn">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>630</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color:  rgb(51, 51, 51);
+	border-radius: 3px;
+	color: white;
+	border: 1px inset gray;
+	font: 16pt &quot;Century Gothic&quot;;
+}
+
+QPushButton:hover{
+	background-color: orange;
+border-radius: 3px;
+	border: 1px inset gray;
+	color: black;
+	font: 16pt &quot;Century Gothic&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Quitter</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1267</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
